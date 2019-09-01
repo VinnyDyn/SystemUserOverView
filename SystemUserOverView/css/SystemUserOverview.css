@@ -1,0 +1,87 @@
+div.Container{
+    width: 100%;
+}
+
+div.SelectorTab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+button.SelectorButton {
+    background-color: inherit;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-color: #2975b2;
+    font-family: "Segoe UI Light";
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+div.Content {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+div.Left {
+    flex: 0 0 132px;
+    background-color: whitesmoke;
+}
+
+div.Right {
+    flex: 1;
+    background-color: whitesmoke;
+}
+
+div.Activities {
+    float: right;
+}
+
+img.Image
+{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 128px;
+    border-radius: 90px;
+    border-color: #2975b2;
+}
+
+p
+{
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.5px;
+    padding-left: 0px;
+    font-family: "Segoe UI Light";
+    color: #2975b2;
+}
+
+a
+{
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 7.5px;
+    padding-left: 0px;
+    font-family: "Segoe UI Light";
+    color: #2975b2;
+    width: 100%;
+    float: left;
+}
+
+button.Activities
+{
+    border: none;
+    background-color: #2975b2;
+    color: white;
+    padding: 5px;
+    width: auto;
+    font-family: "Segoe UI Light";
+    font-size: 17px;
+    margin: 5px;
+    border-radius: 5px;
+}

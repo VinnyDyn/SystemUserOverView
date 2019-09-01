@@ -1,0 +1,2 @@
+D:\Git\PowerApps\SystemUserOverview\obj\Debug\SystemUserOverview.pcfprojAssemblyReference.cache
+D:\Git\PowerApps\SystemUserOverview\obj\Debug\SystemUserOverview.pcfproj.CoreCompileInputs.cache
