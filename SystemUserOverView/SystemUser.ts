@@ -1,4 +1,4 @@
-import { EntityReference } from "./EntityReferece";
+import { EntityReference } from "./EntityReference";
 
 export class SystemUser
 {
@@ -26,4 +26,24 @@ export class SystemUser
         this.BusinessUnit = BusinessUnit;
         this.Parent = Parent;
     }
+
+    public ToXrmLookupValue() : Xrm.LookupValue
+    {
+        var thisEntityRecord = {
+            entityType: "systemuser",
+            id: this.Id,
+            name: this.Name
+        };
+        return thisEntityRecord;
+    }
+    
+    public ToXrmActivityPartyValue() : Xrm.LookupValue[]
+    {
+        var thisEntityRecord = [{
+            entityType: "systemuser",
+            id: this.Id,
+            name: this.Name
+        }];
+        return thisEntityRecord;
+    } 
 }

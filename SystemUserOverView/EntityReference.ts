@@ -10,4 +10,14 @@ export class EntityReference
         this.Id = Id;
         this.Name = Name;
     }
+
+    public ToXrmLookupValue() : Xrm.LookupValue
+    {
+        var thisEntityRecord = {
+            entityType: this.LogicalName,
+            id: this.Id,
+            name: this.Name
+        };
+        return thisEntityRecord;
+    }
 }

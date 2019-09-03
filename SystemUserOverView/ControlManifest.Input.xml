@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="VinnyBControls" constructor="SystemUserOverView" version="0.0.1" display-name-key="SystemUserOverView_Display_Key" description-key="SystemUserOverView_Desc_Key" control-type="standard">
-    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
-    <!-- 
-      Property node's of-type attribute can be of-type-group attribute. 
-      Example:
-      <type-group name="numbers">
+  <control 
+  namespace="VinnyBControls" 
+  constructor="SystemUserOverView" 
+  version="1.0.0" 
+  display-name-key="User Owner Overview" 
+  description-key="
+  * User details
+   - Picture
+   - Name
+   - Telephone
+   - Mobile Phone
+   - Email
+   - Business Unit
+   - Parent User
+  * Hierarchy
+  * Send Email (Outlook)
+  * Delegate Activities" 
+  control-type="standard"
+  preview-image="img/logo.png">
+    <property name="json" display-name-key="Activity Manifest" description-key="" of-type="SingleLine.Text" usage="input" required="false" />
+    <type-group name="allAttributeTypes">
         <type>Whole.None</type>
-        <type>Currency</type>
-        <type>FP</type>
+        <type>TwoOptions</type>
+        <type>DateAndTime.DateOnly</type>
+        <type>DateAndTime.DateAndTime</type>
         <type>Decimal</type>
+        <type>FP</type>
+        <type>Multiple</type>
+        <type>Currency</type>
+        <type>OptionSet</type>
+        <type>SingleLine.Email</type>
+        <type>SingleLine.Text</type>
+        <type>SingleLine.TextArea</type>
+        <type>SingleLine.URL</type>
+        <type>SingleLine.Ticker</type>
+        <type>SingleLine.Phone</type>
       </type-group>
-      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-    -->
+      <property name="attribute" display-name-key="Attribute-Key" description-key="Description-Key" of-type-group="allAttributeTypes" usage="bound" required="true" />
     <resources>
       <code path="index.ts" order="1"/>
       <css path="css/SystemUserOverView.css" order="1" />
-      <!-- UNCOMMENT TO ADD MORE RESOURCES
-      <resx path="strings/SystemUserOverView.1033.resx" version="1.0.0" />
-      -->
+      <img path="img/logo.png" />
     </resources>
     <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
     <feature-usage>
